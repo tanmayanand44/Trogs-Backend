@@ -1,3 +1,8 @@
+#About Trogs
+Trogs is an application that will be used for storing all the logs of users and efficiently search/manipulate them. Currently, we able to store to bank and wallet based transaction logs alongwith parsed from these logs. At backend, we use fully dockerised nodejs based stack with load balancing. At frontend, we use React Native alongwith sms parsing libraries to get all the logs.
+#API Test
+  All are backend api's are documented in Backend/routes/ files
+  
 # Trogs-Backend
 Backend repository for Trogs application for Oktane Hackathon.
 
@@ -6,7 +11,7 @@ Backend repository for Trogs application for Oktane Hackathon.
   2) Download config.js into the cloned Backend folder from [here](https://send.firefox.com/download/dd1525fb8b6504f1/#le5vLtlkm4nrgnVXc6Ko7g)  
   3) Download config.ini into the cloned Worker folder from [here](https://send.firefox.com/download/3a24ba5df3ba0528/#HOEaruAARTwdf7qUyjrBiA)  
   4) Download config.env into the cloned DockerDBSetup folder from [here](https://send.firefox.com/download/d9f7ac316d9ec068/#414zkwjjcivZ6HGTl-5SAA).  
-  5) Run 
+  5) Run
   ```
     $ docker network create trogsNetwork  
   ```
@@ -14,24 +19,24 @@ Backend repository for Trogs application for Oktane Hackathon.
   7) Then open a new terminal and cd back into the main folder and again run `docker-compose up`.   
   8) Setup Complete :thumbsup:  
 
-### Usage: 
+### Usage:
 
 ### Currently API's are not documented but you can see their example usage in test.sh file.  
 
 **Overview**  
 * From frontend an accessToken will be sent in Header of each request, then Authorization handler middleware as defined in auth.js file check if the request is valid and put the JWT of the user as returned by Okta in to req.jwt and similarly for email and uid.  
 * We will be identifying a user by it's unique uid in our database.  
-<hr>. 
+<hr>.
 
 **Without Frontend**  
 
 * To test the backend API's we need a valid accessToken, to do that open the accessToken.html by creating a server in python by following these steps (first ensure either you are logged out of all Okta services or either perform the browser steps in Incognito Mode):  
 
-1) On terminal run (from python2), run this in the folder containing the code: 
+1) On terminal run (from python2), run this in the folder containing the code:
   ```sh
   $ python -m SimpleHTTPServer  
   ```  
-  
+
 2) Now open http://localhost:8000 in Incognito and open accessToken.html with Console of Browser open.  
 
 3) Log into your Okta account, after logging in the accessToken will be logged in console. Copy that token and place it in accessToken variable in test.sh file.  
@@ -61,8 +66,5 @@ Backend repository for Trogs application for Oktane Hackathon.
 }
 ```  
 
-### TODO
-
-=> Implement search API.  
-=> Deploy.  
-=> Define function for data extraction from SMS in python.  
+### FEATURES
+1.  Used elasticsearch for enhanced
