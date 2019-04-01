@@ -1,6 +1,6 @@
-#About Trogs
+# About Trogs
 Trogs is an application that will be used for storing all the logs of users and efficiently search/manipulate them. Currently, we able to store to bank and wallet based transaction logs alongwith parsed from these logs. At backend, we use fully dockerised nodejs based stack with load balancing. At frontend, we use React Native alongwith sms parsing libraries to get all the logs.
-#API Test
+# API Test
   All are backend api's are documented in Backend/routes/ files
   
 # Trogs-Backend
@@ -67,4 +67,5 @@ Backend repository for Trogs application for Oktane Hackathon.
 ```  
 
 ### FEATURES
-1.  Used elasticsearch for enhanced
+1.  Elasticsearch for enhanced search
+2. Load Balancing
