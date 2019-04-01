@@ -19,12 +19,14 @@ def handleRequest(msgJSON):
     logsDb  = client["trogsDb"]["logs"]
     usersDb = client["trogsDb"]["users"]
 
+    merchant=re.findall("(.*?)\--",a)
+    merchant=merchant[0]
     # Currently hard coded for testing
     title    = "Testing log title: " + msgJSON['logData'][0:6]
     amount   = 1000
     msgRefId = "123456789"
     category = "Bank"
-    parse = dataSms(msgJSON['logData'],'SBI');
+    parse = dataSms(msgJSON['logData'],merchant);
     if len(parse)==0:
         return;
     if parse.spamval==1:
