@@ -19,6 +19,6 @@
     "express": "^4.16.4",
     "md5": "^2.2.1",
     "mongoosastic": "^4.4.1",
-    "mongoose": "^5.4.19"
+    "mongoose": "^5.7.5"
   }
 }
